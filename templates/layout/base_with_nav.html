@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+
+      <title>Dashboard</title>
+
+      <!-- Custom fonts for this template-->
+      <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+
+      <!--Date Range PICKER-->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+      {% block css_extra %}{% endblock %}
+
+      <!-- Custom styles for this template-->
+      <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet" />
+      <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+      <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+  </head>
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-sidebar sidebar accordion" id="accordionSidebar">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center mt-5" href="{% url 'home' %}">
+          <div class="sidebar-brand-icon rotate-n-15">
+            <img class="shadow" src="{% static 'img/icon1.png' %}" style="width: 100px;border-radius: 90px;" alt="">
+          </div>
+        </a>
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item mt-3 active">
+          <a class="nav-link d-flex" href="beranda.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_home.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Beranda</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="toko.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_toko.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Toko</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="produk_channel.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_product.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Produk Channel</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="manage_produk.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_manage.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Manage Produk</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="Monitor_order.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_monitor.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Monitor Order</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="manage_promo.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_promo.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Manage Promo</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex" href="laporan_penjualan.html">
+            <i><img style="width: 40px; height:40px" src="{% static 'img/icon_laporan.svg' %}" alt=""></i>
+            <p style="margin: auto 0;">Laporan Penjualan</p></a>
+        </li>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ml-3">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <img src="{% static 'img/button_side.svg' %}" alt="">
+            </button>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+              <button class="rounded-circle border-0" id="sidebarToggle" style="background: none;"><img src="{% static 'img/button_side.svg' %}" alt=""></button>
+            </div>
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown align-self-center">
+                <button class="btn-upgrade"><iconify-icon inline icon="ph:trend-up" width="25" height="25" style="vertical-align: -9px;"></iconify-icon> Upgrade</button>
+              </li>
+
+              <!-- Nav Item - Messages -->
+
+              <li class="nav-item dropdown align-self-center mx-1">
+                <button class="btn-help">Bantuan</button>
+              </li>
+
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="{% static 'img/icon_speaker.svg' %}" alt="">
+                </a>
+              </li>
+
+              <!--<div class="topbar-divider d-none d-sm-block"></div>-->
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img class="img-profile rounded-circle" src="{% static 'img/image_profile.png' %}" /> &ensp;
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!--https://bootstrap-datepicker.readthedocs.io/en/latest/markup.html#date-range-->
+          {% block content %}{% endblock %}
+        </div>
+        <!-- End of Content Wrapper -->
+      </div>
+      <!-- End of Page Wrapper -->
+
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+
+      <!-- Logout Modal-->
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Select "Logout" below if you are ready to end your current session.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                Cancel
+              </button>
+              <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+      <!-- Page level plugins -->
+      <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+
+      <!-- Page level custom scripts -->
+      <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+      <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+
+      <!--Date Range PICKER-->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+      <script>
+        $(function() {
+          $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+          }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+          });
+        });
+      </script>
+      {% block js_extra %}{% endblock %}
+    </div>
+  </body>
+
+</html>

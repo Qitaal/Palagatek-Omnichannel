@@ -1,0 +1,792 @@
+/*-==============================
+        #   Content   #
+================================-*/
+
+.radius-cipung {
+  border-radius: 20px;
+}
+
+.btn-upgrade {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(66, 5, 5, 0.5);
+  border-radius: 30px;
+}
+
+.btn-help {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(66, 5, 5, 0.5);
+  border-radius: 30px;
+}
+
+.jml-pesan {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.nilai-pesan {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #800f0f;
+}
+
+.text1 {
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0px !important;
+  color: #455a64;
+}
+
+.topbar-divider {
+  width: 0;
+  align-self: center;
+  border-right: 1px solid #e3e6f0;
+  height: calc(4.375rem - 2rem);
+}
+
+#table td {
+  background-color: #ffff;
+}
+
+#table tbody tr:nth-child(2) td:first-child {
+  border-top-left-radius: 10px;
+}
+
+#table tbody tr:nth-child(2) td:last-child {
+  border-top-right-radius: 10px;
+}
+
+#table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+#table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/*================================*/
+
+.first-page-h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  text-align: center;
+  color: #800f0f;
+}
+
+/*-================================*/
+
+.card {
+  width: 21rem;
+  height: 17rem;
+  border-radius: 10px;
+}
+.card img {
+  width: 100%;
+  margin-top: 1rem;
+  position: absolute;
+}
+
+.card .img-img {
+  border-radius: 100%;
+  width: 65%;
+  margin-top: 1rem;
+  position: absolute;
+  margin-left: 3rem;
+}
+
+.toko-shopee {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #f4694c;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.toko-tiktok {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.toko-ig {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #f00073;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.toko-fb {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #1877f2;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.toko-wa {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #25d366;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.toko-tele {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #0088cc;
+  text-align: center;
+  margin-top: 13rem;
+}
+
+.offline-store {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 18px;
+  color: #800f0f;
+  text-align: center;
+  margin-top: 14rem;
+}
+
+/*-===========================-*/
+
+#integrasi th {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(66, 5, 5, 0.6);
+  padding-left: 10px;
+}
+
+#integrasi td {
+  padding: 10px;
+  background-color: #fff;
+  border-top: 5px solid #dfd5d5;
+  padding-left: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+#integrasi td button {
+  background-image: url(../img/icon_cloud.svg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+}
+
+#integrasi td span {
+  font-size: 15px;
+}
+
+#integrasi tbody td:first-child {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#integrasi tbody td:last-child {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 0px;
+}
+
+.verify-success {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #007aff;
+}
+
+.verify-unsuccess {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #ff4e4e;
+}
+
+.input-search {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  font-size: 15px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.btn-search {
+  background: #800f0f;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+.btn-integrasi {
+  background: #ffffff;
+  border: 2px solid #800f0f;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #800f0f;
+}
+
+.btn-integrasi:hover {
+  background: #ffffff;
+  border: 2px solid #800f0f;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #800f0f;
+}
+
+/*-============================-*/
+
+#produk th {
+  padding: 10px;
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  color: #000000;
+  border-bottom: 1px solid grey;
+}
+
+#produk td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#produk tr:hover td {
+  padding: 10px;
+  vertical-align: middle;
+  background-color: #afafaf;
+}
+
+#produk .active {
+  padding: 10px;
+  vertical-align: middle;
+  background-color: #afafaf;
+}
+
+#produk td ul {
+  margin: 0px;
+}
+
+#produk td li {
+  padding-left: 0em;
+  text-indent: -2em;
+}
+
+#produk td ul li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.label_toko {
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.botuna {
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.botuna select {
+  border: none;
+}
+.botuna input {
+  border: none;
+}
+
+.btn-reset {
+  background: #ffffff;
+  border: 2px solid #800f0f;
+  border-radius: 30px;
+  padding: 10px 40px;
+  margin-left: -40px;
+}
+
+.btn-menu {
+  background: #800f0f;
+  border: 2px solid #800f0f;
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin: 0px 10px;
+}
+
+.btn-group button {
+  background: rgba(66, 5, 5, 0.6);
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-group button:hover {
+  background: rgba(66, 5, 5, 0.6);
+  border-radius: 8px;
+  border: none;
+  text-decoration-line: underline;
+  box-shadow: none;
+}
+.btn-group button:focus,
+.btn-group button:active {
+  background: rgba(66, 5, 5, 0.6);
+  border-radius: 8px;
+  border: none;
+  text-decoration-line: underline;
+  box-shadow: none;
+}
+
+#produk tr td button {
+  background: none;
+  border: none;
+}
+
+/*-=============================-*/
+.tambah_barang label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.tambah_barang input {
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.tambah_barang select {
+  background: #f2f2f2;
+  border: 1px solid #269ad4;
+  border-radius: 8px;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.tambah_barang textarea {
+  background: #f2f2f2;
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.tambah_barang .btn-add-image {
+  background: none;
+  border: 1px solid rgba(42, 65, 87, 0.24);
+  border-radius: 4px;
+  height: 80px;
+  width: 80px;
+}
+
+.tambah_barang .btn-cencel {
+  background: #ffffff;
+  border: 3px solid #800f0f;
+  border-radius: 8px;
+  padding: 10px 30px;
+  color: #800f0f;
+}
+
+.tambah_barang .btn-custom {
+  background: #800f0f;
+  color: #ffff;
+  border: 3px solid #800f0f;
+  border-radius: 8px;
+  margin: 0px 10px;
+  padding: 10px 30px;
+}
+
+/*-=============================-*/
+.text2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+  padding-top: 20px;
+}
+
+.category label {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.category input {
+  background: #d9d9d9;
+  width: 95%;
+  border: none;
+  padding: 10px;
+}
+
+.bg-choco {
+  background: rgba(66, 5, 5, 0.6);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.category button {
+  background: #420505;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 2px 20px;
+  font-size: 10px;
+}
+
+.text3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.search-category input {
+  background: rgba(172, 175, 198, 0.035);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+#category1 tr th {
+  background: rgba(66, 5, 5, 0.6);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+#category1 td {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  border-bottom: rgba(66, 5, 5, 0.6);
+}
+
+#category1 .btn-edit {
+  background: rgba(66, 5, 5, 0.24);
+  border-radius: 4px;
+  color: #ffff;
+  border: none;
+  padding: 3px 20px;
+}
+
+#category1 .btn-delete {
+  background: #9e0000;
+  border-radius: 4px;
+  color: #ffff;
+  border: none;
+  padding: 3px 20px;
+}
+
+/*-===================================-*/
+
+.btn-ready {
+  background: #420505;
+  border-radius: 4px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  margin: 0px 30px;
+}
+
+.btn-pre-order {
+  background: #ffffff;
+  border-radius: 4px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+  border: none;
+  padding: 10px 30px;
+}
+
+#monitor th {
+  background: #420505;
+  color: #fff;
+  padding: 10px;
+}
+
+#monitor td {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+#monitor .btn-detail {
+  background: #ffffff;
+  border: 1px solid #420505;
+  border-radius: 3px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #420505;
+}
+
+/*-=================================-*/
+
+.btn-detail-monitor {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #420505;
+  background: none;
+  border: none;
+  padding: 10px 30px;
+}
+
+.text4 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.text5 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#detail th {
+  background: rgba(66, 5, 5, 0.6);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+#detail td {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+/*-=============================-*/
+
+#promo th {
+  padding: 10px;
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  color: #000000;
+  border-bottom: 1px solid grey;
+}
+
+#promo td {
+  padding: 10px;
+  vertical-align: middle;
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #0b1627;
+}
+
+#promo td span {
+  vertical-align: middle;
+  font-family: "Futura Md BT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #768699;
+}
+
+#promo tr:hover td {
+  padding: 10px;
+  vertical-align: middle;
+  background-color: #afafaf;
+}
+
+#promo .active {
+  padding: 10px;
+  vertical-align: middle;
+  background-color: #afafaf;
+}
+
+#promo td ul {
+  margin: 0px;
+}
+
+#promo td li {
+  padding-left: 0em;
+  text-indent: -2em;
+}
+
+#promo td ul li {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+#promo td button {
+  background: none;
+  border: none;
+}
+
+.om-om {
+  border-radius: 30px;
+  padding: 10px;
+}
+.om-om select {
+  border: none;
+}
+.om-om input {
+  border: none;
+  width: 150px;
+}
+
+.btn-cari {
+  background: #800f0f;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 0px 60px 0px 60px;
+  height: 50px;
+  margin-top: -15px;
+}
+
+.btn-reset2 {
+  background: #ffffff;
+  border: 2px solid #800f0f;
+  border-radius: 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #800f0f;
+  padding: 0px 60px 0px 60px;
+  height: 50px;
+  margin-top: -15px;
+}
+
+.btn-custom2 {
+  background: #800f0f;
+  border: 3px solid #800f0f;
+  border-radius: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 12px;
+  height: 50px;
+  width: 150px;
+  margin-right: 30px;
+  color: #ffffff;
+}
