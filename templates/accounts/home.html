@@ -1,0 +1,157 @@
+{% extends 'layout/base_with_nav.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row mb-2">
+    <p class="align-self-center mr-3" style="margin: 0px;">Tanggal</p>
+    <div class="col-3 bg-white radius-cipung align-self-center d-flex justify-content-center pl-4 py-2 input-group date">
+      <div class="input-group-addon align-self-center"><span class="glyphicon glyphicon-th"><img src="{% static 'img/calender_icon.svg' %}" alt=""></span></div>
+      <input type="text" id="daterange" name="daterange" style="border: none;" class="form-control"/>
+    </div>
+  </div>
+    <div class="row pt-4">
+      <div class="col mx-3">
+        <div class="col" style="background-color: #dfd5d5;">Semua Pesanan</div>
+        <div class="col bg-white radius-cipung">
+          <div class="d-flex">
+            <div class="col">
+              <div class="col py-3">
+                <h2 class="jml-pesan">0</h2>
+                <p class="text-1" style="margin: 0px;">Jumlah <br> Pesanan</p>
+              </div>
+              <div class="col pb-3">
+                <h2 class="nilai-pesan">Rp.0</h2>
+                <p class="text-1" style="margin: 0px;">Nilai Pesanan</p>
+              </div>
+            </div>
+            <div class="col mt-4"><img src="{% static 'img/icon_chart.svg' %}" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="col mx-3">
+        <div class="col" style="background-color: #dfd5d5;">Pesanan Dibatalkan</div>
+        <div class="col bg-white radius-cipung">
+          <div class="d-flex">
+            <div class="col">
+              <div class="col py-3">
+                <h2 class="jml-pesan">0</h2>
+                <p class="text-1" style="margin: 0px;">Jumlah <br> Dibatalkan</p>
+              </div>
+              <div class="col pb-3">
+                <h2 class="nilai-pesan">Rp.0</h2>
+                <p class="text-1" style="margin: 0px;">Nilai Dibatalkan</p>
+              </div>
+            </div>
+            <div class="col mt-4"><img src="{% static 'img/icon_chart.svg' %}" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="col mx-3">
+        <div class="col" style="background-color: #dfd5d5;">-</div>
+        <div class="col bg-white radius-cipung" style="height:180px"></div>
+      </div>
+    </div>
+    <div class="row pt-4">
+      <div class="col mx-3">
+        <div class="col" style="background-color: #dfd5d5;">Daftar Tugas</div>
+        <div class="col bg-white radius-cipung">
+          <div class="d-flex">
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between px-4">
+                <div class="">0 <p style="margin: 0px;">Belum Bayar</p></div>
+                <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+              </div>
+            </div>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between px-4">
+                <div class="">0 <p style="margin: 0px;">Perlu Diproses</p></div>
+                <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+              </div>
+            </div>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between px-4">
+              <div class="">0 <p style="margin: 0px;">Dibatalkan</p></div>
+              <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+            </div></div>
+          </div>
+          <div class="d-flex">
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between align-self-center px-4">
+                <div class="">0 <p style="margin: 0px;">Telah Diproses</p></div>
+                <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+              </div>
+            </div>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between align-self-center px-4">
+                <div class="">0 <p style="margin: 0px;">Dalam Pengiriman</p></div>
+                <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+              </div>
+            </div>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <div class="col-4 align-self-center">
+              <div class="d-flex justify-content-between align-self-center px-4">
+                <div class="">0 <p style="margin: 0px;">Selesai</p></div>
+                <img src="{% static 'img/icon_b-bayar.svg' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mx-3">
+        <div class="col" style="background-color: #dfd5d5;">Pemberitahuan</div>
+        <div class="col bg-white radius-cipung" style="height: 150px;"></div>
+      </div>
+    </div>
+    <div class="col pt-4">
+      <div class="col" style="background-color: #dfd5d5;">Peringkat Toko</div>
+      <table id="table" class="text-center" style="width: 100%;">
+        <tr>
+          <th>Toko</th>
+          <th>Semua Pesanan</th>
+          <th>Pesanan Dibatalkan</th>
+          <th>SKU Terjual</th>
+          <th>Total Harga</th>
+          <th>Presentase (Pesanan)</th>
+        </tr>
+        <tr>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+        </tr>
+        <tr>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+        </tr>
+        <tr>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+        </tr>
+        <tr>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+          <td>&ensp;</td>
+        </tr>
+      </table>
+      <div class="col bg-white radius-cipung"></div>
+    </div>
+</div>
+{% endblock %}
