@@ -155,3 +155,11 @@ LOGOUT_REDIRECT_URL = '/login'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+# SHOPEE_API
+TEST_PARTNER_ID=config('TEST_PARTNER_ID')
+TEST_KEY=config('TEST_KEY')
+LIVE_PARTNER_ID=config('LIVE_PARTNER_ID')
+LIVE_KEY=config('LIVE_KEY')
+TEST_HOST=config('TEST_HOST')
+LIVE_HOST=config('LIVE_HOST')

@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LogoutView, LoginView
-from django.urls import path
+from django.urls import path, include
 
+from src import marketplace
 from src.accounts.views import HomeView
 
 urlpatterns = [
     path('',  login_required(HomeView.as_view()), name='home'),
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(template_name='accounts/login.html'), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout')
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('marketplace/', include(('src.marketplace.urls', 'src.marketplace'), namespace='marketplace'))
 ]
