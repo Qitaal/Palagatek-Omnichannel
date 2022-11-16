@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class OrderStatus (models.TextChoices):
+class OrderStatus(models.TextChoices):
     UNPAID = 'UNPAID'
     NEED_TO_PROCESS = 'NEED_TO_PROCESS'
     CANCELED = 'CANCELED'
@@ -10,8 +10,13 @@ class OrderStatus (models.TextChoices):
     COMPLETED = 'COMPLETED'
 
 
-class ShopeeStatus (models.TextChoices):
+class ShopeeStatus(models.TextChoices):
     NORMAL = 'NORMAL'
     BANNED = 'BANNED'
     DELETED = 'DELETED'
     UNLIST = 'UNLIST'
+
+
+class MarketplaceName(models.TextChoices):
+    SHOPEE = 'SHOPEE'
+    OFFLINE_STORE = 'OFFLINE_STORE'
