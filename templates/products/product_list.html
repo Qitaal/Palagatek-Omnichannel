@@ -1,0 +1,182 @@
+{% extends 'layout/base_with_nav.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <form action="#">
+      <label class="label_toko" for="">Toko : </label>
+      <input type="checkbox" /> Semua
+    </form>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-lg-4 botuna bg-white">
+      <form action="#">
+        <select name="produk" id="produk">
+          <option value="name"> Nama Produk</option>
+          <option value="variant">Motif</option>
+          <option value="color">Warna</option>
+        </select>
+        <input type="text" placeholder="Masukan kata kunci" aria-controls="datatable"/>
+      </form>
+    </div>
+    <div class="col-lg-1">
+      <button class="btn-reset">Reset</button>
+    </div>
+  </div>
+  <div class="row justify-content-end mt-3">
+    <button id="activeButton" class="btn-menu"> >Nonaktifkan</button>
+    <button id="syncButton" class="btn-menu" data-toggle="modal" data-target="#syncModal">Sinkronisasi</button>
+    <button class="btn-menu" >Hapus</button>
+    <button class="btn-menu" >Tambah Produk</button>
+    <button class="btn-menu" >Eksplore</button>
+  </div>
+  <div class="bg-white my-3 mx-3">
+    <table id="datatable" style="width: 95%; margin: auto;">
+      <thead>
+        <tr>
+          <th><id></id></th>
+          <th>Produk</th>
+          <th>Motif</th>
+          <th>Warna</th>
+          <th>SKU</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th>Waktu Pembaruan</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+<div class="modal fade" id="syncModal" tabindex="-1" role="dialog" aria-labelledby="syncModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="syncModalTitle">Sync Data In Progress</h5>
+      </div>
+      <div class="modal-body">
+        Sync Data In progress. Please wait for a moment
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="successSyncModal" tabindex="-1" role="dialog" aria-labelledby="success-sync-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="success-sync-modal">Sync Product Data Success!</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Products data has been synchronize.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="failSyncModal" tabindex="-1" role="dialog" aria-labelledby="fail-sync-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fail-sync-modal">Sync Product Data Fail!</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Something went wrong, please try again or contact developer.
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block js_extra %}
+<script type="text/javascript">
+$(function () {
+
+  var product_table = $('#datatable').DataTable({
+    order: [[0, "desc"]],
+    columns: [
+      {
+        data: 'id',
+        orderable: true,
+        searchable: true
+      },
+      {
+        data: 'product',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'variant',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'color',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'SKU',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'origin_price',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'stock',
+        orderable: true,
+        searchable: true,
+      },
+      {
+        data: 'updated_at',
+        orderable: true,
+        searchable: true,
+      },
+    ],
+    columnDefs: [
+      {
+        target: 0,
+        visible: false,
+      },
+    ],
+    serverSide: true,
+
+    ajax:{
+      "processing": true,
+      "url": "{% url 'products:product_list_json' %}",
+      "dataSrc": "data",
+    }
+  });
+
+  $('body').on('click', '#syncButton', function(e){
+     e.preventDefault();
+     $.ajax({
+        url: "{% url 'products:product_sync' %}",
+        success: function(result) {
+          $('#syncModal').modal('hide')
+          $('#successSyncModal').modal('show')
+          location.reload()
+        },
+        error: function(result) {
+          $('#syncModal').modal('hide')
+          $('#failSyncModal').modal('show')
+		      location.reload()
+        }
+    });
+  })
+})
+</script>
+{% endblock %}

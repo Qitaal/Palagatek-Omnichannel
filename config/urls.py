@@ -26,5 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(template_name='accounts/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('marketplace/', include(('src.marketplace.urls', 'src.marketplace'), namespace='marketplace'))
+    path('marketplace/', include(('src.marketplace.urls', 'src.marketplace'), namespace='marketplace')),
+    path('products/', include(('src.products.urls', 'src.products'), namespace='products'))
 ]
